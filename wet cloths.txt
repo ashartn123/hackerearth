@@ -1,50 +1,29 @@
+We have m completely wet clothes out under sunshine waiting to become dry. we are now at second t1 and it's raining. It's going to rain again on seconds t2...tn  and after each rain clothes will be completely wet again. Cloth number i needs ai seconds to become dry. We can go out and collect all dry clothes at any moment but can't do this more than g times. What is the maximum number of clothes we can collect until second tn? Note that the duration of each rain is almost zero, so we can ignore it. Also collecting clothes does not take any time from us.
+
+
 #include<stdio.h>
-
 int main()
-
 {
-
 int n,m,g,wet,c=0,j,flag=0;
 int t[n],a[m],i;
 scanf("%d %d %d",&n,&m,&g);
-
 for(i=0;i<n;i++)
-
 scanf("%d",&t[i]);
-
 for(i=0;i<m;i++)
-
 scanf("%d",&a[i]);
-
 wet=0;
-
 for(i=1;i<n;i++)
-
 {
-
 wet=t[i]-t[i-1];
-
 flag=0;
-
 for(j=0;j<m;j++)
-
 {
-
 if(wet>=a[j])
-
 {
-
 c++;
-
 a[j]=10001;
-
 }
-
 }
-
-
 }
-
 printf("%d",c);
-
 }
