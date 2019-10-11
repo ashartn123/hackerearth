@@ -1,0 +1,75 @@
+Manna is extremely disappointed to find out that no one in his college knows his first name. Even his classmates call him only by his last name. Frustrated, he decides to make his fellow college students know his first name by forcing them to solve this question.
+
+You are given a long string as input in each testcase, containing any ASCII character. Your task is to find out the number of times SUVO and SUVOJIT appears in it.
+
+Note: This problem must be solved in C language only.
+
+Input Format
+The first line contains the number of testcases, T. Next, T lines follow each containing a long string S.
+
+Output Format
+For each long string S, display the no. of times SUVO and SUVOJIT appears in it.
+
+Constraints
+
+1 <= T <= 100
+1 <= Length of each string <= 150
+
+#include <stdio.h>
+
+int main()
+
+{
+    
+	int t,i;
+    
+	char s[155];
+    
+	scanf("%d",&t);
+    
+	while(t--)
+    
+	{
+        
+		int a=0,b=0;
+        
+		scanf("%s",s);
+        
+		for(i=0;s[i]!='\0';i++)
+        
+		{
+            
+			if(s[i]=='S' && s[i+1]=='U' && s[i+2]=='V' && s[i+3]=='O')
+            
+			{
+                
+				if(s[i]=='S' && s[i+1]=='U' && s[i+2]=='V' && s[i+3]=='O' && s[i+4]=='J' && s[i+5]=='I' && s[i+6]=='T')
+                
+				continue;
+               
+ 				else
+                    
+					a++;
+            
+			}
+       
+ 		}
+
+        
+		for(i=0;i<=(strlen(s)-7);i++)
+        
+		{
+            
+			if(s[i]=='S' && s[i+1]=='U' && s[i+2]=='V' && s[i+3]=='O'&& s[i+4]=='J' && s[i+5]=='I' && s[i+6]=='T')
+            
+			b++;
+        
+		}
+       
+ 		printf("SUVO = %d, SUVOJIT = %d\n",a,b);
+   
+ 	}
+    
+	return 0;
+
+}
