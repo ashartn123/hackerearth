@@ -1,0 +1,52 @@
+Given a List of Distinct N number a1,a2,a3........an.
+Find The Position Of Number K In The Given List.
+
+Input Format
+
+First Line Take Input Value Of N
+
+Second Line Take Input N Space Separated Integer Value
+
+Third Line Take Input Value Of K
+
+Output Format
+
+Position Of K In The Given List
+
+
+#include<stdio.h>
+
+int main()
+
+{
+        
+int n,k;
+        
+int a[100000];
+                
+scanf("%d",&n);
+        
+for(int i=0;i<n;i++)
+        
+{
+            
+	scanf("%d",&a[i]);
+        
+}
+        
+scanf("%d",&k);
+        
+for(int i=0;i<n;i++)
+        
+{
+            
+	if(k==a[i])
+            
+	printf("%d",i);
+           
+        
+}
+        
+return 0;
+
+}
